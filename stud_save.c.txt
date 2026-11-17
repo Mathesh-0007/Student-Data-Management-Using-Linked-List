@@ -1,0 +1,46 @@
+ 1 #include"student.h"
+  2 void stud_save(SLL *ptr)
+  3 {
+  4 if(ptr==0)
+  5 {
+  6 printf("No records found\n");
+  7 return;
+  8 }
+  9 FILE *fp;
+ 10 fp=fopen("student.dat","w");
+ 11 while(ptr)
+ 12 {
+ 13 fprintf(fp,"%d %s %f\n",ptr->rollno,ptr->name,ptr->percentage);
+ 14 ptr=ptr->next;
+ 15 }
+ 16 printf("Data saved in file\n");
+ 17 fclose(fp);
+ 18 }
+ 19 void stud_readfile(SLL **ptr)
+ 20 {
+ 21 SLL *new;
+ 22 FILE *fp;
+ 23 fp=fopen("student.dat","r");
+ 24 if(fp==0)
+ 25 {
+ 26 printf("student database not present\n");
+ 27 return ;
+ 28 }
+ 29 while(1)
+ 30 {
+ 31 new=malloc(sizeof(SLL));
+ 32 if(fscanf(fp,"%d %s %f",&new->rollno,new->name,&new->percentage)==-1)
+ 33 break;
+ 34 new->next=0;
+ 35 if(*ptr==0)
+ 36 *ptr=new;
+ 37 else
+ 38 {
+ 39 SLL *last=*ptr;
+ 40 while(last->next)
+ 41 last=last->next;
+ 42 last->next=new;
+ 43 }
+ 44 }
+ 45 fclose(fp);
+ 46 }

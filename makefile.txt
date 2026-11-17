@@ -1,0 +1,19 @@
+ exe: stud_main.o stud_add.o stud_del.o stud_mod.o stud_save.o stud_show.o stud_reve.o
+  2         cc stud_main.o stud_add.o stud_del.o stud_mod.o stud_save.o stud_show.o stud_reve.o -o exe
+  3 stud_main.o :stud_main.c
+  4         cc -c stud_main.c
+  5 stud_add.o :stud_add.c
+  6         cc -c stud_add.c
+  7 stud_del.o :stud_del.c
+  8         cc -c stud_del.c
+  9 stud_mod.o :stud_mod.c
+ 10         cc -c stud_mod.c
+ 11 stud_save.o :stud_save.c
+ 12         cc -c stud_save.c
+ 13 stud_show.o :stud_show.c
+ 14         cc -c stud_show.c
+ 15 stud_reverse.o :stud_reve.c
+ 16         c -c stud_reve.c
+ 17 clear:
+ 18         @echo "clearing up....."
+ 19         @rm -r *.o

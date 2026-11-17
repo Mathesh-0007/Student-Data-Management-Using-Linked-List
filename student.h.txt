@@ -1,0 +1,21 @@
+ 1 #include<stdio.h>
+  2 #include<stdlib.h>
+  3 #include<string.h>
+  4 typedef struct st
+  5 {
+  6 int rollno;
+  7 char name[50];
+  8 float percentage;
+  9 struct st *next;
+ 10 }SLL;
+ 11
+ 12 void stud_add(SLL **);
+ 13 void stud_del(SLL **);
+ 14 void stud_show(SLL *);
+ 15 void stud_mod(SLL **);
+ 16 void stud_save(SLL *);
+ 17 void stud_sort(SLL **);
+ 18 void stud_del_all(SLL **);
+ 19 void stud_reverse(SLL **);
+ 20 int countnode(SLL *);
+ 21 void stud_readfile(SLL **);

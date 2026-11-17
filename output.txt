@@ -1,0 +1,510 @@
+******** STUDENT RECORD MENU ********
+
+a : Add new record
+d : Delete a record
+s : Show the list
+m : Modify a record
+v : Save records
+e : exit
+t : Sort the list
+l : Delete all the records
+r : Reverse the list
+c : count of the record
+f : Read the data from file
+
+Enter your choice:a
+bala 44
+******** STUDENT RECORD MENU ********
+
+a : Add new record
+d : Delete a record
+s : Show the list
+m : Modify a record
+v : Save records
+e : exit
+t : Sort the list
+l : Delete all the records
+r : Reverse the list
+c : count of the record
+f : Read the data from file
+
+Enter your choice:a
+arun 55
+******** STUDENT RECORD MENU ********
+
+a : Add new record
+d : Delete a record
+s : Show the list
+m : Modify a record
+v : Save records
+e : exit
+t : Sort the list
+l : Delete all the records
+r : Reverse the list
+c : count of the record
+f : Read the data from file
+
+Enter your choice:a
+ravi 61
+******** STUDENT RECORD MENU ********
+
+a : Add new record
+d : Delete a record
+s : Show the list
+m : Modify a record
+v : Save records
+e : exit
+t : Sort the list
+l : Delete all the records
+r : Reverse the list
+c : count of the record
+f : Read the data from file
+
+Enter your choice:a
+kumar 76
+******** STUDENT RECORD MENU ********
+
+a : Add new record
+d : Delete a record
+s : Show the list
+m : Modify a record
+v : Save records
+e : exit
+t : Sort the list
+l : Delete all the records
+r : Reverse the list
+c : count of the record
+f : Read the data from file
+
+Enter your choice:a
+abi 67
+******** STUDENT RECORD MENU ********
+
+a : Add new record
+d : Delete a record
+s : Show the list
+m : Modify a record
+v : Save records
+e : exit
+t : Sort the list
+l : Delete all the records
+r : Reverse the list
+c : count of the record
+f : Read the data from file
+
+Enter your choice:s
+--------------------------------------
+Roll No. Name Percentage
+--------------------------------------
+5 abi 67.000000
+4 kumar 76.000000
+3 ravi 61.000000
+2 arun 55.000000
+1 bala 44.000000
+--------------------------------------
+******** STUDENT RECORD MENU ********
+
+a : Add new record
+d : Delete a record
+s : Show the list
+m : Modify a record
+v : Save records
+e : exit
+t : Sort the list
+l : Delete all the records
+r : Reverse the list
+c : count of the record
+f : Read the data from file
+
+Enter your choice:m
+Enter which record to search for modification
+r : Search by roll number
+n : Search by name
+p : Search by percentage
+n
+Enter the name
+bala
+bala 44.000000
+Enter the new record
+hari 43
+******** STUDENT RECORD MENU ********
+
+a : Add new record
+d : Delete a record
+s : Show the list
+m : Modify a record
+v : Save records
+e : exit
+t : Sort the list
+l : Delete all the records
+r : Reverse the list
+c : count of the record
+f : Read the data from file
+
+Enter your choice:s
+--------------------------------------
+Roll No. Name Percentage
+--------------------------------------
+5 abi 67.000000
+4 kumar 76.000000
+3 ravi 61.000000
+2 arun 55.000000
+1 hari 43.000000
+--------------------------------------
+******** STUDENT RECORD MENU ********
+
+a : Add new record
+d : Delete a record
+s : Show the list
+m : Modify a record
+v : Save records
+e : exit
+t : Sort the list
+l : Delete all the records
+r : Reverse the list
+c : count of the record
+f : Read the data from file
+
+Enter your choice:m
+Enter which record to search for modification
+r : Search by roll number
+n : Search by name
+p : Search by percentage
+p
+Enter the percentage
+43
+hari 43.000000
+Enter the new record
+bala 43
+******** STUDENT RECORD MENU ********
+
+a : Add new record
+d : Delete a record
+s : Show the list
+m : Modify a record
+v : Save records
+e : exit
+t : Sort the list
+l : Delete all the records
+r : Reverse the list
+c : count of the record
+f : Read the data from file
+
+Enter your choice:s
+--------------------------------------
+Roll No. Name Percentage
+--------------------------------------
+5 abi 67.000000
+4 kumar 76.000000
+3 ravi 61.000000
+2 arun 55.000000
+1 bala 43.000000
+--------------------------------------
+******** STUDENT RECORD MENU ********
+
+a : Add new record
+d : Delete a record
+s : Show the list
+m : Modify a record
+v : Save records
+e : exit
+t : Sort the list
+l : Delete all the records
+r : Reverse the list
+c : count of the record
+f : Read the data from file
+
+Enter your choice:d
+r : Enter roll number to delete
+n : Enter name to delete
+n
+Enter a name:
+bala
+******** STUDENT RECORD MENU ********
+
+a : Add new record
+d : Delete a record
+s : Show the list
+m : Modify a record
+v : Save records
+e : exit
+t : Sort the list
+l : Delete all the records
+r : Reverse the list
+c : count of the record
+f : Read the data from file
+
+Enter your choice:s
+--------------------------------------
+Roll No. Name Percentage
+--------------------------------------
+5 abi 67.000000
+4 kumar 76.000000
+3 ravi 61.000000
+2 arun 55.000000
+--------------------------------------
+******** STUDENT RECORD MENU ********
+
+a : Add new record
+d : Delete a record
+s : Show the list
+m : Modify a record
+v : Save records
+e : exit
+t : Sort the list
+l : Delete all the records
+r : Reverse the list
+c : count of the record
+f : Read the data from file
+
+Enter your choice:d
+r : Enter roll number to delete
+n : Enter name to delete
+r
+Enter a rollno
+2
+******** STUDENT RECORD MENU ********
+
+a : Add new record
+d : Delete a record
+s : Show the list
+m : Modify a record
+v : Save records
+e : exit
+t : Sort the list
+l : Delete all the records
+r : Reverse the list
+c : count of the record
+f : Read the data from file
+
+Enter your choice:s
+--------------------------------------
+Roll No. Name Percentage
+--------------------------------------
+5 abi 67.000000
+4 kumar 76.000000
+3 ravi 61.000000
+--------------------------------------
+******** STUDENT RECORD MENU ********
+
+a : Add new record
+d : Delete a record
+s : Show the list
+m : Modify a record
+v : Save records
+e : exit
+t : Sort the list
+l : Delete all the records
+r : Reverse the list
+c : count of the record
+f : Read the data from file
+
+Enter your choice:r
+******** STUDENT RECORD MENU ********
+
+a : Add new record
+d : Delete a record
+s : Show the list
+m : Modify a record
+v : Save records
+e : exit
+t : Sort the list
+l : Delete all the records
+r : Reverse the list
+c : count of the record
+f : Read the data from file
+
+Enter your choice:s
+--------------------------------------
+Roll No. Name Percentage
+--------------------------------------
+3 ravi 61.000000
+4 kumar 76.000000
+5 abi 67.000000
+--------------------------------------
+******** STUDENT RECORD MENU ********
+
+a : Add new record
+d : Delete a record
+s : Show the list
+m : Modify a record
+v : Save records
+e : exit
+t : Sort the list
+l : Delete all the records
+r : Reverse the list
+c : count of the record
+f : Read the data from file
+
+Enter your choice:c
+count : 3
+******** STUDENT RECORD MENU ********
+
+a : Add new record
+d : Delete a record
+s : Show the list
+m : Modify a record
+v : Save records
+e : exit
+t : Sort the list
+l : Delete all the records
+r : Reverse the list
+c : count of the record
+f : Read the data from file
+
+Enter your choice:t
+n : Sort with name
+p : Sort with percentage
+n
+******** STUDENT RECORD MENU ********
+
+a : Add new record
+d : Delete a record
+s : Show the list
+m : Modify a record
+v : Save records
+e : exit
+t : Sort the list
+l : Delete all the records
+r : Reverse the list
+c : count of the record
+f : Read the data from file
+
+Enter your choice:s
+--------------------------------------
+Roll No. Name Percentage
+--------------------------------------
+5 abi 67.000000
+4 kumar 76.000000
+3 ravi 61.000000
+--------------------------------------
+******** STUDENT RECORD MENU ********
+
+a : Add new record
+d : Delete a record
+s : Show the list
+m : Modify a record
+v : Save records
+e : exit
+t : Sort the list
+l : Delete all the records
+r : Reverse the list
+c : count of the record
+f : Read the data from file
+
+Enter your choice:t
+n : Sort with name
+p : Sort with percentage
+p
+******** STUDENT RECORD MENU ********
+
+a : Add new record
+d : Delete a record
+s : Show the list
+m : Modify a record
+v : Save records
+e : exit
+t : Sort the list
+l : Delete all the records
+r : Reverse the list
+c : count of the record
+f : Read the data from file
+
+Enter your choice:s
+--------------------------------------
+Roll No. Name Percentage
+--------------------------------------
+4 kumar 76.000000
+5 abi 67.000000
+3 ravi 61.000000
+--------------------------------------
+******** STUDENT RECORD MENU ********
+
+a : Add new record
+d : Delete a record
+s : Show the list
+m : Modify a record
+v : Save records
+e : exit
+t : Sort the list
+l : Delete all the records
+r : Reverse the list
+c : count of the record
+f : Read the data from file
+
+Enter your choice:l
+All records deleted
+******** STUDENT RECORD MENU ********
+
+a : Add new record
+d : Delete a record
+s : Show the list
+m : Modify a record
+v : Save records
+e : exit
+t : Sort the list
+l : Delete all the records
+r : Reverse the list
+c : count of the record
+f : Read the data from file
+
+Enter your choice:s
+No student records available
+******** STUDENT RECORD MENU ********
+
+a : Add new record
+d : Delete a record
+s : Show the list
+m : Modify a record
+v : Save records
+e : exit
+t : Sort the list
+l : Delete all the records
+r : Reverse the list
+c : count of the record
+f : Read the data from file
+
+Enter your choice:f
+******** STUDENT RECORD MENU ********
+
+a : Add new record
+d : Delete a record
+s : Show the list
+m : Modify a record
+v : Save records
+e : exit
+t : Sort the list
+l : Delete all the records
+r : Reverse the list
+c : count of the record
+f : Read the data from file
+
+Enter your choice:s
+--------------------------------------
+Roll No. Name Percentage
+--------------------------------------
+1 balu 50.000000
+2 kumar 44.000000
+3 balu 55.000000
+1 abi 66.000000
+2 sai 46.000000
+--------------------------------------
+******** STUDENT RECORD MENU ********
+
+a : Add new record
+d : Delete a record
+s : Show the list
+m : Modify a record
+v : Save records
+e : exit
+t : Sort the list
+l : Delete all the records
+r : Reverse the list
+c : count of the record
+f : Read the data from file
+
+Enter your choice:e
+s : Save and exit
+e : Exit without Saving
+s
+Data saved in file
