@@ -1,79 +1,79 @@
- #include"student.h"
+ 1 #include"student.h"
   2 void stud_del(SLL **ptr)
   3 {
-  4 if(*ptr==0)
-  5 {
-  6 printf("No record found\n");
-  7 return ;
-  8 }
-  9 printf("r : Enter roll number to delete\n");
- 10 printf("n : Enter name to delete\n");
- 11 char ch;
- 12 int num,f=0;
- 13 scanf(" %c",&ch);
- 14 if(ch=='r')
- 15 {
- 16 SLL *del=*ptr,*prev;
- 17 printf("Enter a rollno\n");
- 18 scanf("%d",&num);
- 19 while(del)
- 20 {
- 21 if(num==del->rollno)
- 22 {
- 23 if(del==*ptr)
- 24 *ptr=del->next;
- 25 else
- 26 prev->next=del->next;
+  4         if(*ptr==0)
+  5         {
+  6                 printf("No record found\n");
+  7                 return ;
+  8         }
+  9         printf("r : Enter roll number to delete\n");
+ 10         printf("n : Enter name to delete\n");
+ 11         char ch;
+ 12         int num,f=0;
+ 13         scanf(" %c",&ch);
+ 14         if(ch=='r')
+ 15         {
+ 16                 SLL *del=*ptr,*prev;
+ 17                 printf("Enter a rollno\n");
+ 18                 scanf("%d",&num);
+ 19                 while(del)
+ 20                 {
+ 21                         if(num==del->rollno)
+ 22                         {
+ 23                                 if(del==*ptr)
+ 24                                         *ptr=del->next;
+ 25                                 else
+ 26                                         prev->next=del->next;
  27
- 28 free(del);
- 29 return;
- 30 }
- 31 prev=del;
- 32 del=del->next;
- 33 }
- 34 printf("Rollno not found\n");
- 35 }
- 36 else if(ch=='n')
- 37 {
- 38 char a[30];
- 39 printf("Enter a name:\n");
- 40 scanf("%s",a);
- 41 SLL *del=*ptr,*prev;
- 42 while(del)
- 43 {
- 44 if(strcmp(del->name,a)==0)
- 45 {
- 46 if(del==*ptr)
- 47 *ptr=del->next;
- 48 else
- 49 prev->next=del->next;
- 50 free(del);
- 51 return ;
- 52 }
- 53 prev=del;
- 54 del=del->next;
- 55 }
- 56 printf("Name not found\n");
- 57 }
- 58 else
- 59 printf("Invlid option\n");
+ 28                                 free(del);
+ 29                                 return;
+ 30                         }
+ 31                         prev=del;
+ 32                         del=del->next;
+ 33                 }
+ 34                 printf("Rollno not found\n");
+ 35         }
+ 36         else if(ch=='n')
+ 37         {
+ 38                 char a[30];
+ 39                 printf("Enter a name:\n");
+ 40                 scanf("%s",a);
+ 41                 SLL *del=*ptr,*prev;
+ 42                 while(del)
+ 43                 {
+ 44                         if(strcmp(del->name,a)==0)
+ 45                         {
+ 46                                 if(del==*ptr)
+ 47                                         *ptr=del->next;
+ 48                                 else
+ 49                                         prev->next=del->next;
+ 50                                 free(del);
+ 51                                 return ;
+ 52                         }
+ 53                         prev=del;
+ 54                         del=del->next;
+ 55                 }
+ 56                 printf("Name not found\n");
+ 57         }
+ 58         else
+ 59                 printf("Invlid option\n");
  60 }
  61
  62 void stud_del_all(SLL **ptr)
  63 {
- 64 if(*ptr==0)
- 65 {
- 66 printf("No record found\n");
- 67 return ;
- 68 }
- 69 SLL *del;
- 70 del=*ptr;
- 71 while(del)
- 72 {
- 73 *ptr=del->next;
- 74 free(del);
- 75 del=*ptr;
- 76 }
- 77 *ptr=NULL;
- 78 printf("All records deleted\n");
+ 64         if(*ptr==0)
+ 65         {
+ 66                 printf("No record found\n");
+ 67                 return ;
+ 68         }
+ 69         SLL *del;
+ 70         del=*ptr;
+ 71         while(del)
+ 72         {
+ 73                 *ptr=del->next;
+ 74                 free(del);
+ 75                 del=*ptr;
+ 76         }
+ 77         *ptr=NULL;
+ 78         printf("All records deleted\n");
  79 }
