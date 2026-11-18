@@ -1,18 +1,18 @@
-1 #include"student.h"
+ #include"student.h"
   2 void stud_show(SLL *ptr)
   3 {
-  4 if(ptr==0)
-  5 {
-  6 printf("No student records available\n");
-  7 return;
-  8 }
-  9 printf("--------------------------------------\n");
- 10 printf("Roll No. Name Percentage\n");
- 11 printf("--------------------------------------\n");
- 12 while(ptr)
- 13 {
- 14 printf("%d %s %f\n",ptr->rollno,ptr->name,ptr->percentage);
- 15 ptr=ptr->next;
- 16 }
- 17 printf("--------------------------------------\n");
+  4         if(ptr==0)
+  5         {
+  6                 printf("No student records available\n");
+  7                 return;
+  8         }
+  9         printf("--------------------------------------\n");
+ 10         printf("Roll No. Name Percentage\n");
+ 11         printf("--------------------------------------\n");
+ 12         while(ptr)
+ 13         {
+ 14                 printf("%d %s %f\n",ptr->rollno,ptr->name,ptr->percentage);
+ 15                 ptr=ptr->next;
+ 16         }
+ 17         printf("--------------------------------------\n");
  18 }
