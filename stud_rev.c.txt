@@ -1,36 +1,36 @@
- 1 #include"student.h"
+ #include"student.h"
   2 int countnode(SLL *ptr)
   3 {
-  4 int c=0;
-  5 while(ptr)
-  6 {
-  7 c++;
-  8 ptr=ptr->next;
-  9 }
- 10 return c;
+  4         int c=0;
+  5         while(ptr)
+  6         {
+  7                 c++;
+  8                 ptr=ptr->next;
+  9         }
+ 10         return c;
  11 }
  12 void stud_reverse(SLL **ptr)
  13 {
- 14 if(*ptr==0)
- 15 {
- 16 printf("No records found\n");
- 17 return;
- 18 }
- 19 int c=countnode(*ptr);
- 20 if(c>1)
- 21 {
- 22 SLL *t,**a;
- 23 t=*ptr;
- 24 a=malloc(sizeof(SLL *)*c);
- 25 int i;
- 26 for(i=0;i<c;i++)
- 27 {
- 28 a[i]=t;
- 29 t=t->next;
- 30 }
- 31 for(i=c-1;i>0;i--)
- 32 a[i]->next=a[i-1];
- 33 a[0]->next=0;
- 34 *ptr=a[c-1];
- 35 }
+ 14         if(*ptr==0)
+ 15         {
+ 16                 printf("No records found\n");
+ 17                 return;
+ 18         }
+ 19         int c=countnode(*ptr);
+ 20         if(c>1)
+ 21         {
+ 22                 SLL *t,**a;
+ 23                 t=*ptr;
+ 24                 a=malloc(sizeof(SLL *)*c);
+ 25                 int i;
+ 26                 for(i=0;i<c;i++)
+ 27                 {
+ 28                         a[i]=t;
+ 29                         t=t->next;
+ 30                 }
+ 31                 for(i=c-1;i>0;i--)
+ 32                         a[i]->next=a[i-1];
+ 33                 a[0]->next=0;
+ 34                 *ptr=a[c-1];
+ 35         }
  36 }
