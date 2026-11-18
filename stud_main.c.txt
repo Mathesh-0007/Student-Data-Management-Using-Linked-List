@@ -1,52 +1,52 @@
- 1 #include"student.h"
+ #include"student.h"
   2 int main()
   3 {
-  4 SLL *headptr=0;
-  5 char op;
-  6 while(1)
-  7 {
-  8 printf("******** STUDENT RECORD MENU ********\n");
-  9 printf("\n");
- 10 printf("a : Add new record\n");
- 11 printf("d : Delete a record\n");
- 12 printf("s : Show the list\n");
- 13 printf("m : Modify a record\n");
- 14 printf("v : Save records\n");
- 15 printf("e : exit\n");
- 16 printf("t : Sort the list\n");
- 17 printf("l : Delete all the records\n");
- 18 printf("r : Reverse the list\n");
- 19 printf("c : count of the record\n");
- 20 printf("f : Read the data from file\n");
- 21 printf("\n");
- 22 printf("Enter your choice:");
- 23 scanf(" %c",&op);
- 24 int c;
- 25 switch(op)
- 26 {
- 27 case 'a': stud_add(&headptr);break;
- 28 case 'd': stud_del(&headptr);break;
- 29 case 's': stud_show(headptr);break;
- 30 case 'm': stud_mod(&headptr);break;
- 31 case 'v': stud_save(headptr);break;
- 32 case 'e':printf("s : Save and exit\n");
- 33          printf("e : Exit without Saving\n");
- 34          char ch;
- 35          scanf(" %c",&ch);
- 36          if(ch=='e')
- 37          exit(0);
- 38          else
- 39          {
- 40           stud_save(headptr);
- 41           exit(0);
- 42          }
- 43 case 't': stud_sort(&headptr);break;
- 44 case 'l': stud_del_all(&headptr);break;
- 45 case 'r': stud_reverse(&headptr);break;
- 46 case 'c': c=countnode(headptr);printf("count : %d\n",c);break;
- 47 case 'f': stud_readfile(&headptr);break;
- 48 default : printf("Invalid choice!");break;
- 49 }
+  4         SLL *headptr=0;
+  5         char op;
+  6         while(1)
+  7         {
+  8                 printf("******** STUDENT RECORD MENU ********\n");
+  9                 printf("\n");
+ 10                 printf("a : Add new record\n");
+ 11                 printf("d : Delete a record\n");
+ 12                 printf("s : Show the list\n");
+ 13                 printf("m : Modify a record\n");
+ 14                 printf("v : Save records\n");
+ 15                 printf("e : exit\n");
+ 16                 printf("t : Sort the list\n");
+ 17                 printf("l : Delete all the records\n");
+ 18                 printf("r : Reverse the list\n");
+ 19                 printf("c : count of the record\n");
+ 20                 printf("f : Read the data from file\n");
+ 21                 printf("\n");
+ 22                 printf("Enter your choice:");
+ 23                 scanf(" %c",&op);
+ 24                 int c;
+ 25                 switch(op)
+ 26                 {
+ 27                         case 'a': stud_add(&headptr);break;
+ 28                         case 'd': stud_del(&headptr);break;
+ 29                         case 's': stud_show(headptr);break;
+ 30                         case 'm': stud_mod(&headptr);break;
+ 31                         case 'v': stud_save(headptr);break;
+ 32                         case 'e':printf("s : Save and exit\n");
+ 33                                  printf("e : Exit without Saving\n");
+ 34                                  char ch;
+ 35                                  scanf(" %c",&ch);
+ 36                                  if(ch=='e')
+ 37                                          exit(0);
+ 38                                  else
+ 39                                  {
+ 40                                          stud_save(headptr);
+ 41                                          exit(0);
+ 42                                  }
+ 43                         case 't': stud_sort(&headptr);break;
+ 44                         case 'l': stud_del_all(&headptr);break;
+ 45                         case 'r': stud_reverse(&headptr);break;
+ 46                         case 'c': c=countnode(headptr);printf("count : %d\n",c);break;
+ 47                         case 'f': stud_readfile(&headptr);break;
+ 48                         default : printf("Invalid choice!");break;
+ 49                 }
  50
- 51 }
+ 51         }
  52 }
