@@ -1,125 +1,132 @@
- 1 #include"student.h"
+   1 #include"student.h"
   2 void stud_mod(SLL **ptr)
   3 {
-  4 printf("Enter which record to search for modification\n");
-  5 printf("r : Search by roll number\n");
-  6 printf("n : Search by name\n");
-  7 printf("p : Search by percentage\n");
-  8 char ch;
-  9 scanf(" %c",&ch);
- 10 if(ch=='r')
- 11 {
- 12 printf("Enter the rollnumber\n");
- 13 int num;
- 14 scanf("%d",&num);
- 15 SLL *t=*ptr;
- 16 while(t)
- 17 {
- 18 if(t->rollno==num)
- 19 {
- 20 printf("%s %f\n",t->name,t->percentage);
- 21 printf("Enter the new record\n");
- 22 scanf("%s %f",t->name,&t->percentage);
- 23 return ;
- 24 }
- 25 t=t->next;
- 26 }
- 27 printf("This rollno is not found\n");
- 28 }
- 29 else if(ch=='n')
- 30 {
- 31 printf("Enter the name\n");
- 32 char n[30];
- 33 scanf("%s",n);
- 34 int c=0;
- 35 SLL *t=*ptr;
- 36 while(t)
- 37 {
- 38 if(strcmp(t->name,n)==0)
- 39 {
- 40 printf("%s %f\n",t->name,t->percentage);
- 41 c++;
- 42 }
- 43 t=t->next;
- 44 }
- 45 t=*ptr;
- 46 if(c==1)
- 47 {
- 48 while(t)
- 49 {
- 50 if(strcmp(t->name,n)==0)
- 51 {
- 52 printf("Enter the new record\n");
- 53 scanf("%s %f",t->name,&t->percentage);
- 54 }
- 55 t=t->next;
- 56 }
- 57 }
- 58 else if(c==0)
- 59 printf("No record found in this name\n");
- 60 else if(c>1)
- 61 {
- 62 printf("Enter the rollno\n");
- 63 int num;
- 64 scanf("%d",&num);
- 65 t=*ptr;
- 66 while(t)
- 67 {
- 68 if(t->rollno==num)
- 69 {
- 70 printf("Enter the new record\n");
- 71 scanf("%s %f",t->name,&t->percentage);
- 72 }
- 73 t=t->next;
- 74 }
- 75 }
- 76 }
- 77 else if(ch=='p')
- 78 {
- 79 float per;
- 80 printf("Enter the percentage\n");
- 81 scanf(" %f",&per);
- 82 SLL *t=*ptr;
- 83 int c=0;
- 84 while(t)
- 85 {
- 86 if(t->percentage==per)
- 87 {
- 88 printf("%s %f\n",t->name,t->percentage);
- 89 c++;
- 90 }
- 91 t=t->next;
- 92 }
- 93 t=*ptr;
- 94 if(c==1)
- 95 {
- 96 while(t)
- 97 {
- 98 if(t->percentage==per)
- 99 {
-100 printf("Enter the new record\n");
-101 scanf("%s %f",t->name,&t->percentage);
-102 }
-103 t=t->next;
-104 }
-105 }
-106 else if(c==0)
-107 printf("No record found in this name\n");
-108 else if(c>1)
-109 {
-110 printf("Enter the rollno\n");
-111 int num;
-112 scanf("%d",&num);
-113 t=*ptr;
-114 while(t)
-115 {
-116 if(t->percentage==per)
-117 {
-118 scanf("%s %f",t->name,&t->percentage);
-119 }
-120 t=t->next;
-121 }
-122 }
-123 }
+  4         if(*ptr==0)
+  5         {
+  6                 printf("Records not found\n");
+  7                 return ;
+  8         }
+  9         printf("Enter which record to search for modification\n");
+ 10         printf("r : Search by roll number\n");
+ 11         printf("n : Search by name\n");
+ 12         printf("p : Search by percentage\n");
+ 13         char ch;
+ 14         scanf(" %c",&ch);
+ 15         if(ch=='r')
+ 16         {
+ 17                 printf("Enter the rollnumber\n");
+ 18                 int num;
+ 19                 scanf("%d",&num);
+ 20                 SLL *t=*ptr;
+ 21                 while(t)
+ 22                 {
+ 23                         if(t->rollno==num)
+ 24                         {
+ 25                                 printf("%s %f\n",t->name,t->percentage);
+ 26                                 printf("Enter the new record\n");
+ 27                                 scanf("%s %f",t->name,&t->percentage);
+ 28                                 return ;
+ 29                         }
+ 30                         t=t->next;
+ 31                 }
+ 32                 printf("This rollno is not found\n");
+ 33         }
+ 34         else if(ch=='n')
+ 35         {
+ 36                 printf("Enter the name\n");
+ 37                 char n[30];
+ 38                 scanf("%s",n);
+ 39                 int c=0;
+ 40                 SLL *t=*ptr;
+ 41                 while(t)
+ 42                 {
+ 43                         if(strcmp(t->name,n)==0)
+ 44                         {
+ 45                                 printf("%s %f\n",t->name,t->percentage);
+ 46                                 c++;
+ 47                         }
+ 48                         t=t->next;
+ 49                 }
+ 50                 t=*ptr;
+ 51                 if(c==1)
+ 52                 {
+ 53                         while(t)
+ 54                         {
+ 55                                 if(strcmp(t->name,n)==0)
+ 56                                 {
+ 57                                         printf("Enter the new record\n");
+ 58                                         scanf("%s %f",t->name,&t->percentage);
+ 59                                 }
+ 60                                 t=t->next;
+ 61                         }
+ 62                 }
+ 63                 else if(c==0)
+ 64                         printf("No record found in this name\n");
+ 65                 else if(c>1)
+ 66                 {
+ 67                         printf("Enter the rollno\n");
+ 68                         int num;
+ 69                         scanf("%d",&num);
+ 70                         t=*ptr;
+ 71                         while(t)
+ 72                         {
+ 73                                 if(t->rollno==num)
+ 74                                 {
+ 75                                         printf("Enter the new record\n");
+ 76                                         scanf("%s %f",t->name,&t->percentage);
+ 77                                 }
+ 78                                 t=t->next;
+ 79                         }
+ 80                 }
+ 81         }
+ 82         else if(ch=='p')
+ 83         {
+ 84                 float per;
+ 85                 printf("Enter the percentage\n");
+ 86                 scanf(" %f",&per);
+ 87                 SLL *t=*ptr;
+ 88                 int c=0;
+ 89                 while(t)
+ 90                 {
+ 91                         if(t->percentage==per)
+ 92                         {
+ 93                                 printf("%s %f\n",t->name,t->percentage);
+ 94                                 c++;
+ 95                         }
+ 96                         t=t->next;
+ 97                 }
+ 98                 t=*ptr;
+ 99                 if(c==1)
+100                 {
+101                         while(t)
+102                         {
+103                                 if(t->percentage==per)
+104                                 {
+105                                         printf("Enter the new record\n");
+106                                         scanf("%s %f",t->name,&t->percentage);
+107                                 }
+108                                 t=t->next;
+109                         }
+110                 }
+111                 else if(c==0)
+112                         printf("No record found in this name\n");
+113                 else if(c>1)
+114                 {
+115                         printf("Enter the rollno\n");
+116                         int num;
+117                         scanf("%d",&num);
+118                         t=*ptr;
+119                         while(t)
+120                         {
+121                                 if(t->percentage==per)
+122                                 {
+123                                         scanf("%s %f",t->name,&t->percentage);
+124                                 }
+125                                 t=t->next;
+126                         }
+127                 }
+128         }
+129 }
+~
 124 }
 ~
