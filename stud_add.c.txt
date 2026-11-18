@@ -1,83 +1,82 @@
-1 #include"student.h"
+ 1 #include"student.h"
   2 void stud_add(SLL **ptr)
   3 {
-  4 static int i=1;
-  5 SLL *new;
-  6 new=malloc(sizeof(SLL));
-  7 new->rollno=i;
-  8 scanf("%s %f",new->name,&new->percentage);
-  9 new->next=*ptr;
- 10 *ptr=new;
- 11 i++;
+  4         static int i=1;
+  5         SLL *new;
+  6         new=malloc(sizeof(SLL));
+  7         new->rollno=i;
+  8         scanf("%s %f",new->name,&new->percentage);
+  9         new->next=*ptr;
+ 10         *ptr=new;
+ 11         i++;
  12 }
- //stud_sort
  13 void stud_sort(SLL **ptr)
  14 {
- 15 if(*ptr==0)
- 16 {
- 17 printf("No records found\n");
- 18 return ;
- 19 }
- 20 printf("n : Sort with name\n");
- 21 printf("p : Sort with percentage\n");
- 22 char ch;
- 23 scanf(" %c",&ch);
- 24 SLL *p1=*ptr,t,*p2;
- 25 int i,j,c=countnode(*ptr);
- 26 if(ch=='n')
- 27 {
- 28 for(i=0;i<c-1;i++)
- 29 {
- 30 p2=p1->next;
- 31 for(j=0;j<c-1-i;j++)
- 32 {
- 33 if(strcmp(p1->name,p2->name)>0)
- 34 {
- 35 t.rollno=p1->rollno;
- 36 strcpy(t.name,p1->name);
- 37 t.percentage=p1->percentage;
+ 15         if(*ptr==0)
+ 16         {
+ 17                 printf("No records found\n");
+ 18                 return ;
+ 19         }
+ 20         printf("n : Sort with name\n");
+ 21         printf("p : Sort with percentage\n");
+ 22         char ch;
+ 23         scanf(" %c",&ch);
+ 24         SLL *p1=*ptr,t,*p2;
+ 25         int i,j,c=countnode(*ptr);
+ 26         if(ch=='n')
+ 27         {
+ 28                 for(i=0;i<c-1;i++)
+ 29                 {
+ 30                         p2=p1->next;
+ 31                         for(j=0;j<c-1-i;j++)
+ 32                         {
+ 33                                 if(strcmp(p1->name,p2->name)>0)
+ 34                                 {
+ 35                                         t.rollno=p1->rollno;
+ 36                                         strcpy(t.name,p1->name);
+ 37                                         t.percentage=p1->percentage;
  38
- 39 p1->rollno=p2->rollno;
- 40 strcpy(p1->name,p2->name);
- 41 p1->percentage=p2->percentage;
+ 39                                         p1->rollno=p2->rollno;
+ 40                                         strcpy(p1->name,p2->name);
+ 41                                         p1->percentage=p2->percentage;
  42
- 43 p2->rollno=t.rollno;
- 44 strcpy(p2->name,t.name);
- 45 p2->percentage=t.percentage;
+ 43                                         p2->rollno=t.rollno;
+ 44                                         strcpy(p2->name,t.name);
+ 45                                         p2->percentage=t.percentage;
  46
- 47 }
- 48 p2=p2->next;
- 49 }
- 50 p1=p1->next;
- 51 }
- 52 }
- 53 else if(ch=='p')
- 54 {
- 55 for(i=0;i<c-1;i++)
- 56 {
- 57 p2=p1->next;
- 58 for(j=0;j<c-1-i;j++)
- 59 {
- 60 if(p2->percentage>p1->percentage)
- 61 {
- 62 t.rollno=p1->rollno;
- 63 strcpy(t.name,p1->name);
- 64 t.percentage=p1->percentage;
+ 47                                 }
+ 48                                 p2=p2->next;
+ 49                         }
+ 50                         p1=p1->next;
+ 51                 }
+ 52         }
+ 53         else if(ch=='p')
+ 54         {
+ 55                 for(i=0;i<c-1;i++)
+ 56                 {
+ 57                         p2=p1->next;
+ 58                         for(j=0;j<c-1-i;j++)
+ 59                         {
+ 60                                 if(p2->percentage>p1->percentage)
+ 61                                 {
+ 62                                         t.rollno=p1->rollno;
+ 63                                         strcpy(t.name,p1->name);
+ 64                                         t.percentage=p1->percentage;
  65
- 66 p1->rollno=p2->rollno;
- 67 strcpy(p1->name,p2->name);
- 68 p1->percentage=p2->percentage;
+ 66                                         p1->rollno=p2->rollno;
+ 67                                         strcpy(p1->name,p2->name);
+ 68                                         p1->percentage=p2->percentage;
  69
- 70 p2->rollno=t.rollno;
- 71 strcpy(p2->name,t.name);
- 72 p2->percentage=t.percentage;
+ 70                                         p2->rollno=t.rollno;
+ 71                                         strcpy(p2->name,t.name);
+ 72                                         p2->percentage=t.percentage;
  73
- 74 }
- 75 p2=p2->next;
- 76 }
- 77 p1=p1->next;
- 78 }
- 79 }
- 80 else
- 81 printf("Invalid choice\n");
+ 74                                 }
+ 75                                 p2=p2->next;
+ 76                         }
+ 77                         p1=p1->next;
+ 78                 }
+ 79         }
+ 80         else
+ 81                 printf("Invalid choice\n");
  82 }
